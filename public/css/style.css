@@ -1,0 +1,67 @@
+body { padding-top:0px; }
+
+
+.dashed-border {
+    margin-top: 20px;
+    border: 2px dashed #ccc;
+    border-radius: 5px;
+    padding: 8px; }
+
+.item {
+    padding-right: 10px; }
+
+.item:hover {
+    background: #F3F3F3;
+    border-radius: 10px; }
+
+.item > a > span.ng-binding {
+    display: inline-block;
+    height: 63px;
+    line-height: 63px; }
+
+.item .icon {
+    width: 74px;
+    position: relative;
+    cursor: pointer;
+    float: left;
+    height: 63px; }
+
+.item .icon .document {
+    height: 46px;
+    border-radius: 2px;
+    width: 44px;
+    margin: 10px 0 2px 5px;
+    border: 1px solid #d2dbde;
+    background-image: url("../images/sprites.png");
+    background-position: 8px -2333px;
+    background-repeat: no-repeat;
+    background-color: white; }
+
+.item .icon .document span {
+    font-size: 9px;
+    font-weight: 700;
+    color: #529fd2;
+    text-transform: uppercase;
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding-top: 5px; }
+
+.modal-backdrop.in {
+    filter: alpha(opacity=50);
+    opacity: .3; }
+
+.drives-btn {
+    background-color: aliceblue !important;
+    text-decoration: none !important;
+    padding: 16px;
+    border: 1px;
+    font-size: 16px !important;
+    font-weight: 400 !important; }
+.drives-btn md-icon {
+    width: 40px;
+    height: 40px;
+    padding-bottom: 4px; }
+
+.drives-btn:hover {
+    box-shadow: 0 4px 5px -2px rgba(0, 0, 0, 0.2), 0 7px 10px 1px rgba(0, 0, 0, 0.14), 0 2px 16px 1px rgba(0, 0, 0, 0.12); }

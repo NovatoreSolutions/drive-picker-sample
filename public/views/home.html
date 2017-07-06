@@ -1,0 +1,139 @@
+
+
+<div layout="row" flex="100">
+
+
+	<div layout="column" flex="100">
+
+
+		<div layout="column" class="lato-font">
+			<div style="margin-top: 4em;"></div>
+
+			<div layout="row" flex="100"  flex-offset="5" flex-offset-md="5" flex-offset-sm="5">
+				<div flex="95" flex-md="95" flex-sm="95">
+
+
+					<div flex layout="row">
+
+						<div flex="33">
+
+							<a  href="javascript:;" lk-google-picker on-picked="onPicked(docs)" on-loaded="onLoaded()" on-cancel="onCancel()" class="md-whiteframe-z1 drives-btn" flex layout='column' layout-align="center center">
+
+								<md-icon md-svg-icon="../../images/google-drive.svg"></md-icon>
+								<span>Open my Google Drive</span>
+
+							</a>
+
+						</div>
+						<div flex="33">
+							<a  href="javascript:;" one-drive-picker on-onedrive-success="OneDrivedriveSuccess(files)" on-onedrive-error="onOnedriveError()" on-onedrive-cancel="onOnedriveCancel()" class="md-whiteframe-z1 drives-btn" flex layout='column' layout-align="center center">
+
+								<md-icon md-svg-icon="../../images/OneDrive_logo1.svg"></md-icon>
+								<span>Open my OneDrive</span>
+
+							</a>
+
+
+						</div>
+						<div flex="33">
+							<a  href="javascript:;"  drop-box-picker on-dropbox-success="onDropboxSuccess(files)"  on-dropbox-cancel="onDropboxCancel()" class="md-whiteframe-z1 drives-btn" flex layout='column' layout-align="center center">
+
+								<md-icon md-svg-icon="../../images/dropbox.svg"></md-icon>
+								<span>Open my Dropbox Drive</span>
+
+							</a>
+						</div>
+
+					</div>
+
+
+
+
+					<div layout="row" class="dashed-border" ng-switch="files.length > 0">
+						<div flex layout="row" layout-align="center center" ng-switch-when="false">
+							<div class="none">No files selected yet (Google Drive)</div>
+						</div>
+
+						<div layout="row" flex ng-switch-when="true">
+							<div class="item item-test" ng-repeat="file in files">
+								<a href="{{ file.url }}" target="_blank">
+									<div class="icon">
+										<div class="document">
+                                           <span class="ng-binding">
+                                             {{ file.name | getExtension }}
+                                           </span>
+										</div>
+									</div>
+									<span>{{ file.name | limitTo:20 }}</span><span ng-if="file.name.length >=20">...</span>
+								</a>
+							</div>
+
+						</div>
+					</div>
+
+					<div layout="row" class="dashed-border" ng-switch="onedrive_files.length > 0">
+						<div flex layout="row" layout-align="center center" ng-switch-when="false">
+							<div class="none">No files selected yet (OneDrive)</div>
+						</div>
+
+						<div layout="row" flex ng-switch-when="true">
+
+							<div class="item item-test" ng-repeat="file in onedrive_files">
+								<a href="{{ file.webUrl }}" target="_blank">
+									<div class="icon">
+										<div class="document">
+                                           <span class="ng-binding">
+                                             {{ file.name | getExtension }}
+                                           </span>
+										</div>
+									</div>
+									<span>{{ file.name | limitTo:20 }}</span><span ng-if="file.name.length >=20">...</span>
+								</a>
+
+							</div>
+
+						</div>
+					</div>
+					<div layout="row" class="dashed-border" ng-switch="dpfiles.length > 0">
+						<div flex layout="row" layout-align="center center" ng-switch-when="false">
+							<div class="none">No files selected yet (Dropbox)</div>
+						</div>
+
+						<div layout="row" flex ng-switch-when="true">
+
+							<div class="item item-test" ng-repeat="file in dpfiles">
+								<a href="{{ file.link }}" target="_blank">
+									<div class="icon">
+										<div class="document">
+                                           <span class="ng-binding">
+                                             {{ file.name | getExtension }}
+                                           </span>
+										</div>
+									</div>
+									<span>{{ file.name | limitTo:20 }}</span><span ng-if="file.name.length >=20">...</span>
+								</a>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+
+
+
+			</div>
+			<div style="margin-top: 4em;"></div>
+
+
+
+
+
+
+		</div>
+	</div>
+
+</div>
+
+
+
+

@@ -1,0 +1,13 @@
+{
+	"name": "angular",
+	"version": "1.0.0",
+	"dependencies": {
+	  "bootstrap": "3.3.6",
+	  "angular": "1.6.0",
+	  "angular-route": "^1.6.0",
+	    "angular-material": "1.1.1",
+	  "angular-google-picker": "^0.2.2",
+	  "angular-onedrive-picker": "*",
+	  "angular-dropbox-box-picker": "*"
+	}
+}
