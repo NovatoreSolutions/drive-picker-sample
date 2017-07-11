@@ -4,10 +4,9 @@ This is a MEAN (MongoDB, Express, Angular, Node) boilerplate, used and maintaine
 
 
 ## Major implementation includes
-
-1.Angular Google Drive Picker
-2.OneDrive Picker 
-3.Dropbox picker 
+1. Angular Google Drive Picker
+2. OneDrive Picker 
+3. Dropbox picker 
 
 ## Installation
 1. Download the repository
